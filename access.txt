@@ -1,2 +1,8 @@
+jenkins
 user: admin
 pass: 0d1823e13aa14c4fb7a3da84e30c3804
+
+gitea
+user: brian
+email: work-email
+pass: brian1234.
