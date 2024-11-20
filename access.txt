@@ -1,0 +1,2 @@
+user: admin
+pass: 0d1823e13aa14c4fb7a3da84e30c3804
