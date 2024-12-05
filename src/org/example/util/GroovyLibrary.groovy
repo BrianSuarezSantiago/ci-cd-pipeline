@@ -1,4 +1,4 @@
-package org.example.java
+package org.example.util
 
 class GroovyLibrary {
     def prepareStage() {
