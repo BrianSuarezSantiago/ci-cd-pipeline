@@ -1,24 +1,45 @@
-@Library('deployment')
-import org.example.util.Helper
-
+@Library('')
+import org.example.java.GroovyLibrary
 pipeline {
     agent any
+    // ! incluir las opciones de timeout e historial
+
+    environment {
+        REPOSITORY_URL = 'https://github.com/BrianSuarezSantiago/java-app.git'
+        FOLDER_NAME = 'java-app' // '' Placeholder, will be completed dynamically
+    }
 
     stages {
-        stage('Usar función de la librería') {
+        stage('Prepare Stage') {
             steps {
                 script {
-                    // Llamar a la función definida en vars/miPaso.groovy
-                    miPaso('¡Hola desde la librería compartida!')
+                    prepareStage()
                 }
             }
         }
-        stage('Usar clase de src/') {
+
+        stage('Build Stage') {
             steps {
                 script {
-                    // Llamar a la clase Helper definida en src/org/example/util/Helper.groovy
-                    def saludo = Helper.saludar('Mundo Jenkins')
-                    echo saludo
+                    print("build")
+                    //mavenBuildStage()
+                    //npmBuildStage()
+                }
+            }
+        }
+
+        stage('Package Stage') {
+            steps {
+                script {
+                    print("package")
+                }
+            }
+        }
+
+        stage('Deploy Stage') {
+            steps {
+                script {
+                    print("deploy")
                 }
             }
         }
