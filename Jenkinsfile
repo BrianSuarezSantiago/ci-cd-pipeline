@@ -1,5 +1,6 @@
-@Library('')
+@Library('deployment') _
 import org.example.java.GroovyLibrary
+
 pipeline {
     agent any
     // ! incluir las opciones de timeout e historial
@@ -13,7 +14,8 @@ pipeline {
         stage('Prepare Stage') {
             steps {
                 script {
-                    prepareStage()
+                    echo "Building ${config.projectName}"
+                    GroovyLibrary.prepareStage()
                 }
             }
         }
