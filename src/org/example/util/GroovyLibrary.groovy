@@ -2,8 +2,8 @@ package org.example.util
 
 class GroovyLibrary {
     def prepareStage() {
-        sh "git clone ${FRONTEND_REPOSITORY_URL}"
-        sh "git clone ${BACKEND_REPOSITORY_URL}"
+        //sh "git clone ${FRONTEND_REPOSITORY_URL}"
+        //sh "git clone ${BACKEND_REPOSITORY_URL}"
         print("Repositories have been successfully cloned.")
         
         //! Establecer FOLDER_NAME dinámicamente (esto puede cambiar según el repositorio)

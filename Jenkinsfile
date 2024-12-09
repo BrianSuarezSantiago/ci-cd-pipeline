@@ -13,7 +13,7 @@ pipeline {
         stage('Prepare Stage') {
             steps {
                 script {
-                    echo "Building ${config.projectName}"
+                    //echo "Building ${config.projectName}"
                     GroovyLibrary.prepareStage()
                 }
             }
