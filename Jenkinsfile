@@ -1,5 +1,4 @@
 @Library('deployment') _
-import org.example.java.GroovyLibrary
 
 pipeline {
     agent any
